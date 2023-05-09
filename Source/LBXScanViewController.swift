@@ -157,7 +157,7 @@ open class LBXScanViewController: UIViewController {
             self?.picker.sourceType = UIImagePickerController.SourceType.photoLibrary
             self?.picker.delegate = self
             self?.picker.allowsEditing = true
-            self?.present (self?.picker, animated: true, completion: {
+            self?.present (self?.picker ?? UIImagePickerController(), animated: true, completion: {
                 self?.picker.delegate = self
             })
         }
